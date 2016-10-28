@@ -14,7 +14,7 @@
 	在 `Podfile` 中加上下面这行：
 
 	```
-	pod 'MaxSocialShare'
+	pod 'MaxShare'
 	```
 
 	打开应用 `终端`，执行以下命令:
@@ -46,7 +46,7 @@
 
 MaxLeap 中用一个用户系统，可以使用第三方登录，认证信息保存在 `MLUser` 中。
 
-MaxSocialShare 不依赖于 MaxLeap, 不会自动使用 `MLUser` 中的第三方平台认证信息，也不会保存分享过程中的认证信息。
+MaxShare 不依赖于 MaxLeap, 不会自动使用 `MLUser` 中的第三方平台认证信息，也不会保存分享过程中的认证信息。
 
 ### 初始化分享环境
 
@@ -70,7 +70,7 @@ MaxSocialShare 不依赖于 MaxLeap, 不会自动使用 `MLUser` 中的第三方
 
 ```
 [WeiboSDK registerApp:@"your_weibo_appKey"];
-// MaxSocialShare 认证时会使用默认的 `redirectUrl`: https://api.weibo.com/oauth2/default.html
+// MaxShare 认证时会使用默认的 `redirectUrl`: https://api.weibo.com/oauth2/default.html
 ```
 
 #### 初始化腾讯 QQ 分享环境：
