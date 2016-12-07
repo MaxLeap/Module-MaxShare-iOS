@@ -78,7 +78,7 @@ fromBarButtonItem:(nullable UIBarButtonItem *)barButtonItem
 
 + (void)shareItem:(MLShareItem *)item withContainer:(MaxSocialContainer *)container completion:(MLSActivityViewControllerCompletionBlock)block {
     
-    dispatch_async(dispatch_get_main_queue(), ^{
+    dispatch_block_t b = ^{
         MLSActivityViewController *avc = [[MLSActivityViewController alloc] initWithItem:item];
         avc.completionHandler = block;
         
@@ -94,7 +94,13 @@ fromBarButtonItem:(nullable UIBarButtonItem *)barButtonItem
         } else {
             [[self topmostViewController] presentViewController:avc animated:YES completion:nil];
         }
-    });
+    };
+    
+    if ([NSThread isMainThread]) {
+        b();
+    } else {
+        dispatch_async(dispatch_get_main_queue(), b);
+    }
 }
 
 + (void)shareText:(NSString *)text completion:(MLSActivityViewControllerCompletionBlock)block {

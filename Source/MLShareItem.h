@@ -15,12 +15,15 @@ typedef NS_ENUM(int, MLSContentMediaType) {
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ *  The MLShareItem represents an item to share.
+ */
 @interface MLShareItem : NSObject
 
 /** @name Properties */
 
 /**
-*  Share item id. Used for weibo media objectID now.
+*  Share item id
 */
 @property (nullable, nonatomic, readonly) NSUUID *objectId;
 
@@ -108,9 +111,9 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Create a webpage share item.
  *
- *  @param imageURL The webpage URL
- *  @param title    title
- *  @param detail   description
+ *  @param url    The webpage URL
+ *  @param title  title
+ *  @param detail description
  *
  *  @return A new webpage share item.
  */

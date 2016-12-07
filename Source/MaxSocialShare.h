@@ -3,10 +3,10 @@
 //  MaxSocialShare
 //
 
-#import "MLSActivity.h"
-#import "MLShareItem.h"
-#import "MLSActivityType.h"
-#import "MLSActivityViewController.h"
+#import <MaxSocialShare/MLSActivity.h>
+#import <MaxSocialShare/MLShareItem.h>
+#import <MaxSocialShare/MLSActivityType.h>
+#import <MaxSocialShare/MLSActivityViewController.h>
 
 //! Project version number for MaxSocialShare.
 FOUNDATION_EXPORT double MaxSocialShareVersionNumber;

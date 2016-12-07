@@ -182,7 +182,7 @@ UICollectionViewDataSource>
     self.cancelButton = [UIButton buttonWithType:UIButtonTypeSystem];
     self.cancelButton.frame = CGRectMake(0, CGRectGetMaxY(self.pageControl.frame), cvFrame.size.width, self.contentView.frame.size.height - CGRectGetMaxY(self.pageControl.frame));
     self.cancelButton.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
-    [self.cancelButton setTitle:@"Cancel" forState:UIControlStateNormal];
+    [self.cancelButton setTitle:NSLocalizedString(@"取消", nil) forState:UIControlStateNormal];
     [self.cancelButton addTarget:self action:@selector(cancelAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:self.cancelButton];
     
@@ -221,7 +221,7 @@ UICollectionViewDataSource>
     }
     [self dismissViewControllerAnimated:YES completion:^{
         // call completion callbacks
-        NSError *error = [NSError errorWithDomain:@"SocialShareErrorDomain" code:-1 userInfo:@{NSLocalizedDescriptionKey:@"User cancelled"}];
+        NSError *error = [NSError errorWithDomain:@"SocialShareErrorDomain" code:-1 userInfo:@{NSLocalizedDescriptionKey:NSLocalizedString(@"用户取消", nil)}];
         if (self.completionHandler) {
             self.completionHandler(MLSActivityTypeNone, NO, error);
         }

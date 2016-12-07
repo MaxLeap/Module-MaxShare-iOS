@@ -19,7 +19,7 @@
 }
 
 - (nullable NSString *)title {
-    return @"微信";
+    return NSLocalizedString(@"微信", nil);
 }
 
 - (nullable UIImage *)image {

@@ -24,7 +24,7 @@
 }
 
 - (nullable NSString *)title {
-    return @"新浪微博";
+    return NSLocalizedString(@"新浪微博", nil);
 }
 
 - (nullable UIImage *)image {
@@ -107,7 +107,7 @@
     if ([WeiboSDKClass sendRequest:req]) {
         [self activityDidFinishWithError:nil];
     } else {
-        [self activityDidFinishWithError:[NSError errorWithDomain:@"MLSocialShareErrorDomain" code:-1 userInfo:@{NSLocalizedDescriptionKey:@"分享失败"}]];
+        [self activityDidFinishWithError:[NSError errorWithDomain:@"MLSocialShareErrorDomain" code:-1 userInfo:@{NSLocalizedDescriptionKey:NSLocalizedString(@"分享失败", nil)}]];
     }
 }
 

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MLSActivity.h"
+#import <MaxSocialShare/MLSActivity.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

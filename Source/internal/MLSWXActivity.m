@@ -101,7 +101,7 @@
     if ([WXApi sendReq:self.request]) {
         [self activityDidFinishWithError:nil];
     } else {
-        [self activityDidFinishWithError:[NSError errorWithDomain:@"MLSocialShareErrorDomain" code:-1 userInfo:@{NSLocalizedDescriptionKey:@"分享失败"}]];
+        [self activityDidFinishWithError:[NSError errorWithDomain:@"MLSocialShareErrorDomain" code:-1 userInfo:@{NSLocalizedDescriptionKey:NSLocalizedString(@"分享失败", nil)}]];
     }
 }
 

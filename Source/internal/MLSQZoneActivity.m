@@ -20,7 +20,7 @@
 }
 
 - (nullable NSString *)title {
-    return @"QQ空间";
+    return NSLocalizedString(@"QQ空间", nil);
 }
 
 - (nullable UIImage *)image {

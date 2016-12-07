@@ -11,6 +11,7 @@
 
 #import <Foundation/Foundation.h>
 
+/** 按钮行为类型 */
 typedef NS_ENUM(int, MLSActivityType) {
     
     /** 其他平台，暂不支持 */

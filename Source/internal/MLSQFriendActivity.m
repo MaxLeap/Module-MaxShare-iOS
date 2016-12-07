@@ -19,7 +19,7 @@
 }
 
 - (nullable NSString *)title {
-    return @"QQ";
+    return NSLocalizedString(@"QQ", nil);
 }
 
 - (nullable UIImage *)image {

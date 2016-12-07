@@ -55,21 +55,21 @@
     NSString *errMsg = nil;
     switch (sendResult) {
         case 6: //EQQAPIAPPNOTREGISTED:
-            errMsg = @"App未注册";
+            errMsg = NSLocalizedString(@"App未注册", nil);
             break;
         case 5: //EQQAPIMESSAGECONTENTINVALID:
         case 4: //EQQAPIMESSAGECONTENTNULL:
         case 3: //EQQAPIMESSAGETYPEINVALID:
-            errMsg = @"发送参数错误";
+            errMsg = NSLocalizedString(@"发送参数错误", nil);
             break;
         case 1: //EQQAPIQQNOTINSTALLED:
-            errMsg = @"未安装手Q";
+            errMsg = NSLocalizedString(@"未安装手Q", nil);
             break;
         case 2: //EQQAPIQQNOTSUPPORTAPI:
-            errMsg = @"API接口不支持";
+            errMsg = NSLocalizedString(@"API接口不支持", nil);
             break;
         case -1: //EQQAPISENDFAILD:
-            errMsg = @"发送失败";
+            errMsg = NSLocalizedString(@"发送失败", nil);
             break;
         default:
             break;
